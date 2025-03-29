@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Rivaldo Buket Bunga by s.id/Progresio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta charset="utf-8"><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /><meta name="description" content="Computer Sofware and Hardware Enginer" /><meta name="author" content="lgarin211" /><meta
+      name="google"
+      content="Rivaldo Buket Bunga by s.id/Progresio" 
+    /><meta property="og:title" content="Rivaldo Buket Bunga by s.id/Progresio" /><meta
+      property="og:description"
+      content="Rivaldo Buket Bunga by s.id/Progresio"
+    /><meta
+      property="og:image"
+      content="https://img.pikbest.com/origin/10/50/09/362pIkbEsTRpB.png!w700wp"
+    /><meta property="og:type" content="website" /><meta property="og:url" content="s.id/progresio" /><meta property="og:site_name" content="GarinPoin" /><meta property="og:locale" content="en_US" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta
+      name="twitter:card"
+      content="Rivaldo Buket Bunga by s.id/Progresio"
+    /><meta name="twitter:title" content="Rivaldo Buket Bunga by s.id/Progresio" /><meta
+      name="twitter:description"
+      content="Rivaldo Buket Bunga by s.id/Progresio"
+    /><meta
+      name="twitter:image"
+      content="https://img.pikbest.com/origin/10/50/09/362pIkbEsTRpB.png!w700wp"
+    /><!-- Favicon-->
+	<link href="https://img.pikbest.com/origin/10/50/09/362pIkbEsTRpB.png!w700wp" rel="icon" type="image/x-icon" /><!-- Custom Google font-->
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" /><!-- Bootstrap icons-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" /><!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" /><!-- AOS Library CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /><!-- tambahkan default head color --><meta name="theme-color" content="#800080" />
+		<script>
+			async function fetchSpreadsheetData() {
+				const spreadsheetId = '1X0WPXAyyVRqPqKFh-Ld8k1ZY4ZB58W3LPWyqgA9xFjA'; // Extracted from the provided link
+				const sheetName = 'Sheet1'; // Replace with your sheet name
+				const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
+
+				try {
+					const response = await fetch(url);
+					const text = await response.text();
+					const json = JSON.parse(text.substring(47, text.length - 2)); // Parse the JSONP response
+					const rows = json.table.rows;
+
+					if (rows && rows.length > 0) {
+						const interloopDiv = document.getElementById('interloop');
+						interloopDiv.innerHTML = ''; // Clear existing content
+
+						// Loop through the data rows
+						rows.forEach(row => {
+							const name = row.c[0]?.v || 'No Name';
+							const imageUrl = row.c[1]?.v || 'images/default.jpg';
+							const price = row.c[2]?.v || 'No Price';
+							// revormate prioce to remove "Rp." and convert to number
+							const description = row.c[3]?.v || 'No Description';
+
+							interloopDiv.innerHTML += `
+							<div class="col-4 col-12-medium" >
+								<section class="box feature">
+									<a href="#" class="image featured">
+										<img style="height: 20rem;object-fit: cover;" src="${imageUrl}" alt="${name}" />
+									</a>
+									<div class="inner">
+										<header>
+											<h2>${name}</h2>
+											<p>Rp. ${price}</p>
+										</header>
+										<p>${description}</p>
+									</div>
+								</section>
+							</div>`;
+						});
+					}
+				} catch (error) {
+					console.error('Error fetching spreadsheet data:', error);
+				}
+			}
+
+			// Call the function to fetch and display data
+			fetchSpreadsheetData();
+		</script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#navToggle{
+				display: none !important;
+			}
+		</style>
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+							<div id="logo">
+								<h1><a href="#">Buket</a></h1>
+								<span>by Rivaldo</span>
+							</div>
+					</header>
+				</div>
+
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-7 col-12-medium">
+								<h2>Selamat Datang</h2>
+								<p>Pilih Bukket Bunga Terbaik dan Terkeren buat kamu dan Orang Terkasih</p>
+							</div>
+							<div class="col-5 col-12-medium">
+								<ul>
+									<li><a href="#" id="walink" class="button large icon solid fa-arrow-circle-right">Hubungi Aku</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row" id="interloop">
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<div id="content">
+										<section class="last">
+											<h2>Jadi Apalagi yang kamu Tunggu?</h2>
+											<p>
+												Hubungi kami untuk mendapatkan buket bunga yang kamu inginkan. Kami siap membantu kamu dalam memilih buket bunga yang sesuai dengan kebutuhanmu. Jangan ragu untuk menghubungi kami jika ada pertanyaan atau permintaan khusus. Kami akan dengan senang hati membantu kamu menemukan buket bunga yang sempurna untuk momen spesialmu.
+											</p>
+											<a href="#" class="button icon solid fa-arrow-circle-right">Kontak WhatsApp</a>
+										</section>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; 2025 Buket Bunga Rivaldo. All rights reserved.</li>
+										<li>Powered by <a href="https://lgarin211.github.io/progresio/progresio.html" target="_blank">Progresio</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.getElementById('walink').onclick = function() {
+					var phoneNumber = '6283198086528'; // Ganti dengan nomor WhatsApp yang diinginkan
+					var message = 'Halo, saya tertarik dengan produk Anda!'; // Pesan yang ingin dikirim
+					var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+					window.open(url, '_blank');
+				};
+			</script>
+
+	</body>
+</html>
