@@ -16,9 +16,51 @@
     <link href="./HTML/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
     <link href="./HTML/css/style.min.css" rel="stylesheet" type="text/css" />
 
+    <style>
+        .btn.btn-primary {
+            background-color: #20c8eb !important;
+            border: 1px solid #ffffff !important;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(90, 79, 220, .15);
+        }
+        .btn.btn-soft-primary {
+            background-color: rgba(90, 79, 220, .18) !important;
+            color: #20c8eb !important;
+        }
+        .bg-primary {
+            --bs-bg-opacity: 1;
+            background-color: #20eba9 !important;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: #ffffff;
+            background-color: #20c8eb;
+        }
+
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4" style="font-family: 'Muli', sans-serif;"><strong>Progresio</strong></span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;">
+                <a href="#" class="nav-link active" aria-current="page"><strong>Tentang Kami</strong></a>
+            </li>
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;"><a href="#" class="nav-link">
+                <strong>Layanan</strong></a>
+            </li>
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;">
+                <a href="#" class="nav-link"><strong>Team</strong></a>
+            </li>
+
+          </ul>
+        </header>
+      </div>
         <!-- Hero Start -->
         <section class="hero-2-bg position-relative" style="background-image: url('HTML/images/hero-2-bg.jpg')" id="home">
         <!-- <section class="hero-2-bg position-relative" style="background-image: url('https://cdn-blog.superprof.com/blog_id/wp-content/uploads/2021/10/seorang-programer-dapat-memilih-profesi-sebagai-developer-digital.jpg')" id="home"> -->
@@ -27,22 +69,25 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-10">
                         <div class="text-center">
-                            <span class="badge badge-soft-primary text-uppercase">Bersama Kita Bertumbuh</span>
                             <h1 class="hero-2-title text-shadow text-dark fw-bold my-4" style="transform: scale(0);" id="pigsio">
                                 Progresio
                             </h1>
-                            <p class="text-muted w-75 mx-auto mb-5">
-                                Progresio adalah platform yang membantu anda dalam mengembangkan bisnis anda di dunia Digital.
-                                Mulai dari Sol Sepatu Hingga Pabrikan Besar
+                            
+                            <span class="badge badge-soft-primary text-uppercase mb-3">Bersama Kita Bertumbuh</span>
+                            <hr>
+                            <p class="text-muted w-75 mx-auto mb-5" style="color: #9e9cb9 !important;">
+                                Progresio adalah platform yang membantu Anda mengembangkan bisnis di dunia digital.
+                                Mulai dari usaha kecil hingga perusahaan besar, kami siap mendukung pertumbuhan Anda.
                             </p>
-                            <a href="#" class="btn btn-primary">
-                                Read More <i class="mdi mdi-timer-sand mdi-spin me-2"></i>
+                            <a href="https://api.whatsapp.com/send/?phone=6288223999950&&text=Hai Progresio Aku ingin berprogress, bikinin aku ... " class="btn btn-primary " style="background-color: #20c8eb !important;border: red !important">
+                                Kontak Kami 
+                                <i class="mdi mdi-whatsapp"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+         </section>
         <!-- Hero End -->
 
 
@@ -54,7 +99,7 @@
                         <div class="text-center mb-5">
                             <h3 class="title mb-3">Kenapa di Progresio</h3>
                             <p class="text-muted font-size-15">
-                                Karena kami memberikan layanan yang terbaik untuk anda dalam mengembangkan bisnis anda
+                                Karena kami memberikan layanan terbaik untuk membantu Anda mengembangkan bisnis secara efektif dan efisien.
                             </p>
                         </div>
                     </div>
@@ -63,7 +108,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6 align-self-center">
                         <div class="mb-4 mb-lg-0">
-                            <img src="./HTML/images/features-img.png" alt="" class="img-fluid d-block mx-auto">
+                            <img src="./untuk progresio-01.png" alt="" class="img-fluid d-block mx-auto">
                         </div>
                     </div>
     
@@ -71,14 +116,12 @@
                         <p class="font-weight-medium text-uppercase mb-2 "><i class="mdi mdi-chart-bubble h2 text-primary me-1 align-middle"></i> Creative Features</p>
                         <h3 class="font-weight-semibold line-height-1_4 mb-4">Build <b>community</b> &amp; <b>conversion</b>
                             with our suite of <b>social tool</b></h3>
-                        <p class="text-muted font-size-15 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis?</p>
-                        <p class="text-muted mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout icon-xs me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Donec pede justo
-                            fringilla vel nec.</p>
-                        <p class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy icon-xs me-1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line></svg> Cras ultricies mi eu
-                            turpis hendrerit fringilla.</p>
+                        <p class="text-muted font-size-15 mb-4">Kami menyediakan solusi inovatif untuk membangun komunitas dan meningkatkan konversi dengan alat sosial kami.</p>
+                        <p class="text-muted mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout icon-xs me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Kami memberikan desain yang menarik dan fungsional.</p>
+                        <p class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy icon-xs me-1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line></svg> Dukungan penuh dari tim ahli kami untuk setiap langkah Anda.</p>
                         <div class="mt-5">
-                            <a href="#" class="btn btn-primary me-2">Read More</a>
-                            <a href="#" class="btn btn-soft-primary">Buy Now</a>
+                            <!-- https://api.whatsapp.com/send/?phone=62895333269003&text=Hallo+Dimitree+Sentul+City%2C+saya+hendak+melakukan+reservasi%3A%0A%0AAtas+Nama%3A+martin%0ANomor+Telepon%3A+082111424592%0AJam+Reservasi%3A+15%3A04%0AJumlah+Orang%3A+35%0AArea+Meroko%3A+ya%0A%0ATerima+kasih%0A%0A%0A+https%3A%2F%2Fdimitreecafesentulcity.web.app&type=phone_number&app_absent=0 -->
+                            <a href="https://api.whatsapp.com/send/?phone=6288223999950&text=Hai Progresio Aku ingin berprogress, bikinin aku ... " class="btn btn-primary me-2">Hubungi Kami <i class="mdi mdi-whatsapp me-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -91,8 +134,7 @@
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
                             <h3 class="title mb-3">Choose Your Plan</h3>
-                            <p class="text-muted font-size-15">Et harum quidem rerum facilis est et expedita distinctio nam
-                                libero tempore cum soluta nobis eligendi cumque.</p>
+                            <p class="text-muted font-size-15" style="color: #ffffff !important;">Pilih paket yang sesuai dengan kebutuhan Anda dan nikmati layanan terbaik dari kami.</p>
                         </div>
                     </div>
                 </div>
@@ -104,13 +146,13 @@
                             </div>
                             <h4 class="title mb-3">Simple</h4>
                             <h1 class="fw-bold mb-0"><b><sup class="h4 me-2 fw-bold">Rp</sup>-</b></h1>
-                            <p class="text-muted font-weight-semibold">Bikin Website Sampai Online</p>
+                            <p class="text-muted font-weight-semibold">Kami membantu Anda membuat website hingga siap digunakan secara online.</p>
                             <ul class="list-unstyled pricing-item mb-4">
-                                <li class="text-muted">Design premium</li>
-                                <li class="text-muted">Daftar dan update profile google bisnis</li>
-                                <li class="text-muted">Support dari Ahli</li>
+                                <li class="text-muted">Desain premium</li>
+                                <li class="text-muted">Pendaftaran dan pembaruan profil Google Bisnis</li>
+                                <li class="text-muted">Dukungan penuh dari tim ahli</li>
                             </ul>
-                            <a href="#" class="btn btn-outline-primary pr-btn">Buy Now</a>
+                            <a href="https://api.whatsapp.com/send/?phone=6288223999950&&text=Hai Progresio Aku ingin berprogress, bikinin aku paket Simpel ..." class="btn btn-outline-primary pr-btn">Aku Tertarik buat ...</a>
                             <div class="mt-4">
                                 <div class="hero-bottom-img">
                                     <img src="./HTML/images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
@@ -127,32 +169,30 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center mb-5">
-                        <h3 class="title mb-3">Choose Your Plan</h3>
-                        <p class="text-muted font-size-15">Et harum quidem rerum facilis est et expedita distinctio nam
-                            libero tempore cum soluta nobis eligendi cumque.</p>
+                        <h3 class="title mb-3">Tim Kami</h3>
+                        <p class="text-muted font-size-15">Kami adalah tim profesional yang berdedikasi untuk membantu Anda mencapai kesuksesan.</p>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-6 mt-5 text-center">
-                      <img src="./mc1.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
+                      <img src="./sc2.png" class="img-fluid rounded rounded-circle" alt="Martin CAESAR" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">MARTIN CAESAR </h2>
-                      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                    </div><!-- /.col-6 mt-5 text-center -->
+                      <p>Martin adalah seorang programer yang berperan aktif dengan klien. Ia sangat kompeten, terutama dalam bidang marketing dan hubungan masyarakat (PR).</p>
+                    </div>
                     <div class="col-6 mt-5 text-center">
-                      <img src="./felix.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
-                      <h2 class="fw-normal">FELIX Oktavianus</h2>
-                      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                    </div><!-- /.col-6 mt-5 text-center -->
-                    <div class="col-6 mt-5 text-center">
-                        <img src="./mc1.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
-                      <h2 class="fw-normal">Doni arifitranto</h2>
-                      <p>And lastly this, the third column of representative placeholder content.</p>
-                    </div><!-- /.col-6 mt-5 text-center -->
-
+                      <img src="./flex.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
+                      <h2 class="fw-normal">FELIX OCTAVIANUS</h2>
+                      <p>Felix adalah seorang desainer hebat sekaligus programer game yang luar biasa.</p>
+                    </div>
                     <div class="col-6 mt-5 text-center">
                         <img src="./ww.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
+                      <h2 class="fw-normal">DONI ARIFITRANTO</h2>
+                      <p>Doni adalah programer yang interaktif dalam menciptakan tampilan serta hasil kerja yang menarik.</p>
+                    </div>
+                    <div class="col-6 mt-5 text-center">
+                        <img src="./agus.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">Agustinus</h2>
                       <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
                     </div>
@@ -171,6 +211,7 @@
                     insk--;
                     document.getElementById('pigsio').style.transform = "scale("+insk+")";
                 }
-            }, 100);
+            }, 10);
         </script>
 </body>
+</html>
