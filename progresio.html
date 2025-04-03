@@ -16,6 +16,8 @@
     <link href="./HTML/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
     <link href="./HTML/css/style.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         .btn.btn-primary {
             background-color: #20c8eb !important;
@@ -49,31 +51,31 @@
     
           <ul class="nav nav-pills">
             <li class="nav-item" style="font-family: 'Muli', sans-serif;">
-                <a href="#" class="nav-link active" aria-current="page"><strong>Tentang Kami</strong></a>
+                <a href="#features" class="nav-link " aria-current="page" onclick="hendingbotton(0)"><strong>Tentang Kami</strong></a>
             </li>
-            <li class="nav-item" style="font-family: 'Muli', sans-serif;"><a href="#" class="nav-link">
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;">
+                <a href="#pricing" class="nav-link" onclick="hendingbotton(1)">
                 <strong>Layanan</strong></a>
             </li>
             <li class="nav-item" style="font-family: 'Muli', sans-serif;">
-                <a href="#" class="nav-link"><strong>Team</strong></a>
+                <a href="#team" class="nav-link active" onclick="hendingbotton(2)"><strong>Team</strong></a>
             </li>
-
           </ul>
         </header>
       </div>
         <!-- Hero Start -->
-        <section class="hero-2-bg position-relative" style="background-image: url('HTML/images/hero-2-bg.jpg')" id="home">
+        <section class="hero-2-bg position-relative" style="background-image: url('HTML/images/hero-2-bg.jpg')" id="home" >
         <!-- <section class="hero-2-bg position-relative" style="background-image: url('https://cdn-blog.superprof.com/blog_id/wp-content/uploads/2021/10/seorang-programer-dapat-memilih-profesi-sebagai-developer-digital.jpg')" id="home"> -->
             <div class="bg-layout-overlay"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-10">
                         <div class="text-center">
-                            <h1 class="hero-2-title text-shadow text-dark fw-bold my-4" style="transform: scale(0);" id="pigsio">
+                            <h1 class="hero-2-title text-shadow text-dark fw-bold my-4" style="transform: scale(0);" id="pigsio"  data-aos="flip-left" data-aos-duration="3000">
                                 Progresio
                             </h1>
                             
-                            <span class="badge badge-soft-primary text-uppercase mb-3">Bersama Kita Bertumbuh</span>
+                            <span class="badge badge-soft-primary text-uppercase mb-3" data-aos="zoom-in">Bersama Kita Bertumbuh</span>
                             <hr>
                             <p class="text-muted w-75 mx-auto mb-5" style="color: #9e9cb9 !important;">
                                 Progresio adalah platform yang membantu Anda mengembangkan bisnis di dunia digital.
@@ -91,7 +93,7 @@
         <!-- Hero End -->
 
 
-        <section class="section bg-light feather-bg-img active" style="background-image: url('HTML/images/features-bg-img.png');" id="features">
+        <section class="section bg-light feather-bg-img active" style="background-image: url('HTML/images/features-bg-img.png');" id="features" data-aos="flip-left">
             <div class="bg-layout-overlay"></div>
             <div class="container">
                 <div class="row justify-content-center">
@@ -128,7 +130,7 @@
             </div>
         </section>
         <!-- Pricing Start -->
-        <section class="section bg-primary" id="pricing">
+        <section class="section bg-primary" id="pricing" data-aos="flip-left">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
@@ -165,7 +167,7 @@
         </section>
         <!-- Pricing End -->
 
-        <section class="section bg-light" id="team">
+        <section class="section bg-light" id="team" data-aos="flip-left">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center mb-5">
@@ -176,22 +178,22 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-6 mt-5 text-center">
+                    <div class="col-6 mt-5 text-center" data-aos="flip-left">
                       <img src="./sc2.png" class="img-fluid rounded rounded-circle" alt="Martin CAESAR" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">MARTIN CAESAR</h2>
                       <p>Martin adalah seorang programer yang berperan aktif dalam berinteraksi dengan klien. Ia memiliki kompetensi tinggi, terutama dalam bidang marketing dan hubungan masyarakat (PR).</p>
                     </div>
-                    <div class="col-6 mt-5 text-center">
+                    <div class="col-6 mt-5 text-center" data-aos="flip-left">
                       <img src="./flex.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">FELIX OCTAVIANUS</h2>
                       <p>Felix adalah seorang desainer berbakat sekaligus programer game yang kreatif dan inovatif.</p>
                     </div>
-                    <div class="col-6 mt-5 text-center">
+                    <div class="col-6 mt-5 text-center" data-aos="flip-left">
                         <img src="./ww.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">DONI ARIFITRANTO</h2>
                       <p>Doni adalah seorang programer yang ahli dalam menciptakan tampilan interaktif dan hasil kerja yang estetis serta fungsional.</p>
                     </div>
-                    <div class="col-6 mt-5 text-center">
+                    <div class="col-6 mt-5 text-center" data-aos="flip-left">
                         <img src="./agus.jpg" class="img-fluid rounded rounded-circle" alt="" style="object-fit: cover;height: 15rem;width: 15rem;">
                       <h2 class="fw-normal">AGUSTINUS  </h2>
                       <p>Agustinus adalah seorang backend developer yang andal, bekerja di balik layar untuk memastikan sistem berjalan dengan efisien dan tanpa hambatan.</p>
@@ -265,7 +267,10 @@
 
 
 
-        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
         <script>
             var insk=20;
@@ -275,6 +280,16 @@
                     document.getElementById('pigsio').style.transform = "scale("+insk+")";
                 }
             }, 10);
+
+
+            var listmenu = document.getElementsByClassName('nav-link');
+            function hendingbotton(index) {
+                for (let i=0; i< listmenu.length; i++) {
+                    listmenu[i].classList.remove('active');
+                }
+
+                listmenu[index].classList.add('active');
+            }
         </script>
 </body>
 </html>

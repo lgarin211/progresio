@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 onclick="gantiNama()">Hello, <span id="nama">doni!</span></h1>
+
+    <script>
+        // var ob1 = {
+        //     nama: "martin",
+        //     umur: 20,
+        //     hobi: ["makan", "minum", "tidur"],
+        //     alamat: {
+        //         jalan: "jalan raya",
+        //         kota: "jakarta"
+        //     },
+        //     print: function() {
+        //         console.log("nama saya "+this.nama+", saya tinggal di "+this.alamat.jalan+" "+this.alamat.kota);
+
+        //         console.log("hobi saya "+this.hobi[0]+", "+this.hobi[1]+", "+this.hobi[2]);
+        //     }
+        // }
+        // ob1.print();
+
+        // var nama=["Martin", "doni", "felix"];
+        
+        // var img=["https://asset-2.tstatic.net/lampung/foto/bank/images/Tak-Pakai-Nama-Asli-di-Dunia-Hiburan-Anya-Geraldin-Beberkan-Awal-Mula-Nama-Panggungnya.jpg", "https://cdn.grid.id/crop/0x0:0x0/945x630/photo/2022/11/09/foto-cover-ariel-tatum-sukses-p-20221109121350.jpg", "https://asset.kompas.com/crops/k3pw4VfJPMPcZSYuulX9aux317I=/0x16:750x516/1200x800/data/photo/2022/05/16/62827cca4da73.jpg"];
+
+        // var umur = 20;
+
+        // // for (var i = 0; i < nama.length; i++) {
+        // //     document.getElementById("nama").innerHTML=nama[i];
+        // // }
+        // function gantiNama() {
+        //     var i = 0;
+        //     setInterval(function() {
+        //         var imgElement = `
+        //         <img src="${img[i]}" alt="" style="width: 250px; height: 500px; object-fit: cover;" >
+        //         `
+        //         document.getElementById("nama").innerHTML=nama[i]+imgElement;
+        //         i++;
+        //         if (i >= nama.length) {
+        //             i = 0;
+        //         }
+        //     }, 1000);
+        // }
+
+       function gantiNama() { var a=[]
+        fetch('https://reqres.in/api/users?page=2').then(function(response) {
+            a=response.json();
+            return response;
+        }).catch(function(error) {
+            console.log('Error:', error);
+        })
+        setInterval(function() {
+            var i = 0;
+            a.then(function(data) {
+                var imgElement = `
+                <img src="${data.data[i].avatar}" alt="" style="width: 250px; height: 500px; object-fit: cover;" >
+                `
+                document.getElementById("nama").innerHTML=data.data[i].first_name+imgElement;
+                i++;
+                if (i >= data.data.length) {
+                    i = 0;
+                }
+            });
+        }, 100);
+        }
+    </script>
+</body>
+</html>
