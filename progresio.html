@@ -65,29 +65,43 @@
             color: #ffffff;
             background-color: #20c8eb;
         }
+        .animate {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .animate.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4" style="font-family: 'Muli', sans-serif;"><strong>Progresio</strong></span>
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top bg-white">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none text-center">
+            <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+            <img src="https://progesio.my.id/icon.png" class="img-fluid" alt="" style="width: 50px; height: 50px;">
+            <span class="fs-4" style="font-family: 'Muli', sans-serif;margin-left: -0.35rem;"><strong>rogesio</strong></span>
           </a>
-    
           <ul class="nav nav-pills">
             <li class="nav-item" style="font-family: 'Muli', sans-serif;">
-                <a href="#" class="nav-link active" aria-current="page"><strong>Tentang Kami</strong></a>
-            </li>
-            <li class="nav-item" style="font-family: 'Muli', sans-serif;"><a href="#" class="nav-link">
-                <strong>Layanan</strong></a>
+              <a href="#home" class="nav-link" id="nav-home"><strong>Home</strong></a>
             </li>
             <li class="nav-item" style="font-family: 'Muli', sans-serif;">
-                <a href="#" class="nav-link"><strong>Team</strong></a>
+              <a href="#features" class="nav-link" id="nav-features"><strong>Layanan</strong></a>
             </li>
-
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;">
+              <a href="#team" class="nav-link" id="nav-team"><strong>Team</strong></a>
+            </li>
+            <li class="nav-item" style="font-family: 'Muli', sans-serif;">
+              <a href="#blog" class="nav-link" id="nav-blog"><strong>Portofolio</strong></a>
+            </li>
           </ul>
         </header>
       </div>
@@ -206,35 +220,77 @@
             </div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6 mt-5 text-center">
-                      <img src="./sc2.png" class="img-fluid rounded rounded-circle mb-3" alt="Martin CAESAR" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
-                      <h2 class="fw-normal">MARTIN CAESAR</h2>
-                      <p>Martin adalah seorang programer yang berperan aktif dalam berinteraksi dengan klien. Ia memiliki kompetensi tinggi, terutama dalam bidang marketing dan hubungan masyarakat (PR).</p>
+                    <div class="col-sm-6 mt-5 text-center">
+                        <img src="./sc2.png" class="img-fluid rounded rounded-circle mb-3" alt="Martin CAESAR" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
+                        <h2 class="fw-normal">MARTIN CAESAR</h2>
+                        <p>Martin adalah seorang programer yang memiliki keahlian tinggi dalam marketing dan hubungan masyarakat. Ia berperan aktif dalam berinteraksi dengan klien.</p>
+                        <hr>
                     </div>
-                    <div class="col-6 mt-5 text-center">
-                      <img src="./flex.jpg" class="img-fluid rounded rounded-circle mb-3" alt="" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
-                      <h2 class="fw-normal">FELIX OCTAVIANUS</h2>
-                      <p>Felix adalah seorang desainer berbakat sekaligus programer game yang kreatif dan inovatif.</p>
+                    <div class="col-sm-6 mt-5 text-center">
+                        <img src="./flex.jpg" class="img-fluid rounded rounded-circle mb-3" alt="Felix Octavianus" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
+                        <h2 class="fw-normal">FELIX OCTAVIANUS</h2>
+                        <p>Felix adalah seorang desainer berbakat dan programer game yang kreatif. Ia selalu menghadirkan ide-ide inovatif untuk menciptakan desain yang menarik dan fungsional.</p>
+                        <hr>
                     </div>
-                    <div class="col-6 mt-5 text-center">
-                        <img src="./doni.png" class="img-fluid rounded rounded-circle mb-3" alt="" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
-                      <h2 class="fw-normal">DONI ARIFITRANTO</h2>
-                      <p>Doni adalah seorang programer yang ahli dalam menciptakan tampilan interaktif dan hasil kerja yang estetis serta fungsional.</p>
+                    <div class="col-sm-6 mt-5 text-center">
+                        <img src="./doni.png" class="img-fluid rounded rounded-circle mb-3" alt="Doni Arifitranto" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
+                        <h2 class="fw-normal">DONI ARIFITRANTO</h2>
+                        <p>Doni adalah seorang programer yang ahli dalam menciptakan tampilan interaktif. Ia memastikan hasil kerja yang estetis dan fungsional untuk memenuhi kebutuhan klien.</p>
+                        <hr>
                     </div>
-                    <div class="col-6 mt-5 text-center">
-                        <img src="./Jason.jpg" class="img-fluid rounded rounded-circle mb-3" alt="" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
-                      <h2 class="fw-normal">JASON AARON</h2>
-                      <p>Seorang Grafik Designer Dengan Keterampilan Komunikasi dan hasil yang terbaik dan interaktif.</p>
+                    <div class="col-sm-6 mt-5 text-center">
+                        <img src="./Jason.jpg" class="img-fluid rounded rounded-circle mb-3" alt="Jason Aaron" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
+                        <h2 class="fw-normal">JASON AARON</h2>
+                        <p>Jason adalah seorang desainer grafis dengan keterampilan komunikasi yang luar biasa. Ia selalu menghasilkan karya yang interaktif dan berkualitas tinggi.</p>
+                        <hr>
                     </div>
-                    <div class="col-6 mt-5 text-center">
-                        <img src="./agus.jpg" class="img-fluid rounded rounded-circle mb-3" alt="" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
-                      <h2 class="fw-normal">AGUSTINUS</h2>
-                      <p>Agustinus adalah seorang backend developer yang andal, bekerja di balik layar untuk memastikan sistem berjalan dengan efisien dan tanpa hambatan.</p>
+                    <div class="col-sm-6 mt-5 text-center">
+                        <img src="./agus.jpg" class="img-fluid rounded rounded-circle mb-3" alt="Agustinus" style="object-fit: cover;transform: scale(1.2); height: 10rem;width: 10rem;">
+                        <h2 class="fw-normal">AGUSTINUS</h2>
+                        <p>Agustinus adalah seorang backend developer yang andal. Ia bekerja di balik layar untuk memastikan sistem berjalan dengan efisien dan tanpa hambatan.</p>
+                        <hr>
                     </div>
                   </div>
             </div>
         </section>
+        
 
+        <!-- out product -->
+        <section class="section bg-primary" id="pricing">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-5">
+                            <h3 class="title mb-3">Your Product</h3>
+                            <p class="text-muted font-size-15" style="color: #ffffff !important;">Beberapa Product Yang kami Kembangkan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="pricing-box rounded text-center p-4">
+                            <div class="pricing-icon-bg my-4">
+                                <i class="mdi mdi-whatsapp h1"></i>
+                            </div>
+                            <h4 class="title mb-3">WhatsApp Blass</h4>
+                            <h1 class="fw-bold mb-0"><b><sup class="h4 me-2 fw-bold">Rp</sup>50.000~</b></h1>
+                            <p class="text-muted font-weight-semibold">Kami Menyediakan Blass WhatsApp Dengan Berbagai Pemilihan.</p>
+                            <ul class="list-unstyled pricing-item mb-4">
+                                <li class="text-muted">Layanan Online 24 jam</li>
+                                <li class="text-muted">Untuk Kebutuhan Chatbot, OTP, atau 2 Factor Auth</li>
+                                <li class="text-muted">Dukungan penuh dari tim ahli</li>
+                            </ul>
+                            <a href="https://theapiofwa.progesio.my.id/" target="_blank" class="btn btn-outline-primary pr-btn">Menuju Layanan</a>
+                            <div class="mt-4">
+                                <div class="hero-bottom-img">
+                                    <img src="./HTML/images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="section blog active" id="blog">
             <div class="container">
@@ -302,6 +358,13 @@
 
         
 
+        <!-- Floating WhatsApp Button -->
+        <a href="https://api.whatsapp.com/send/?phone=6288223999950&text=Hai+Progresio+Aku+ingin+berprogress..." 
+           class="btn btn-success" 
+           style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <i class="mdi mdi-whatsapp" style="font-size: 24px; color: white;"></i>
+        </a>
+
         <script>
             var insk=20;
             setInterval(() => {
@@ -310,6 +373,49 @@
                     document.getElementById('pigsio').style.transform = "scale("+insk+")";
                 }
             }, 10);
+
+            // Highlight active navbar link based on scroll position
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 70; // Adjust for fixed navbar height
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+            // Axios example for potential API calls
+            axios.get('https://jsonplaceholder.typicode.com/posts/1')
+                .then(response => console.log('Axios Response:', response.data))
+                .catch(error => console.error('Axios Error:', error));
+
+            // Add random animation on scroll
+            const animatedElements = document.querySelectorAll('.animate');
+            window.addEventListener('scroll', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                    } else {
+                        element.classList.remove('fade-in');
+                    }
+                });
+            });
+
+            // Apply 'hidden' class to all elements with 'animate' class initially
+            animatedElements.forEach(element => element.classList.add('hidden'));
         </script>
 </body>
 </html>
